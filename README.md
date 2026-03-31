@@ -1,12 +1,14 @@
 # ai-diagrams
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776ab?logo=python&logoColor=white)](https://python.org)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![uv](https://img.shields.io/badge/uv-astral--sh-de5fe9?logo=uv)](https://docs.astral.sh/uv/)
-[![Excalidraw](https://img.shields.io/badge/excalidraw-compatible-6965db)](https://excalidraw.com)
-
 <p align="center">
   <img src="pipeline.svg" width="600" alt="mermaid → mermaid2excalidraw.py → excalidraw">
+</p>
+
+<p align="center">
+  <a href="https://python.org"><img src="https://img.shields.io/badge/python-3.10+-3776ab?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"></a>&nbsp;
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-f5a623?style=for-the-badge" alt="License"></a>&nbsp;
+  <a href="https://docs.astral.sh/uv/"><img src="https://img.shields.io/badge/uv-astral--sh-de5fe9?style=for-the-badge&logo=uv" alt="uv"></a>&nbsp;
+  <a href="https://excalidraw.com"><img src="https://img.shields.io/badge/excalidraw-compatible-6965db?style=for-the-badge&logo=excalidraw&logoColor=white" alt="Excalidraw"></a>
 </p>
 
 ## Usage
@@ -14,6 +16,9 @@
 ```bash
 uv run mermaid2excalidraw.py input.mmd output.excalidraw
 ```
+
+> [!NOTE]
+> This script is not that sophisticated. This repo is meant to serve as a reference implementation for how you might use agents to make diagrams **(1)** more quickly and **(2)** beautiful enough for marketing materials.
 
 ## Philosophy
 
