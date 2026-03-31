@@ -27,4 +27,42 @@ This is dramatically cheaper and faster to iterate on. Your AI assistant edits a
 
 ## Example
 
-[`naive-storage-flow-pull-storm.mmd`](naive-storage-flow-pull-storm.mmd) → [`naive-storage-flow-pull-storm.excalidraw`](naive-storage-flow-pull-storm.excalidraw)
+**Input** ([`naive-storage-flow-pull-storm.mmd`](naive-storage-flow-pull-storm.mmd)):
+
+```mermaid
+sequenceDiagram
+    title Pull Storm — Every Node Fetches Everything
+
+    participant HN as Head Node
+    participant EXT as GitHub / PyPI /\nConda Forge /\nHuggingFace Hub
+    participant WN as Worker Nodes\n(x N)
+
+    rect #d0bfff [1] Head Node Setup
+    HN->>EXT: git clone
+    HN->>EXT: uv sync
+    HN->>EXT: huggingface-cli download model
+    HN->>EXT: download dataset
+    end
+
+    rect #e9ecef [2] Distribute Code
+    HN->>WN: rsync project/
+    end
+
+    rect #ffc9c9 [3] Worker Pull Storm
+    WN->>EXT: uv sync (each node)
+    WN->>EXT: huggingface-cli download model (each node)
+    WN->>EXT: download dataset (each node)
+    end
+
+    rect #b2f2bb [4] Train
+    HN->>HN: torchrun
+    HN->>WN: torchrun (all nodes)
+    WN->>WN: torchrun
+    end
+```
+
+**Output** ([`naive-storage-flow-pull-storm.excalidraw`](naive-storage-flow-pull-storm.excalidraw)):
+
+<p align="center">
+  <img src="naive-storage-flow-pull-storm.excalidraw.svg" width="800" alt="Pull Storm sequence diagram rendered in Excalidraw">
+</p>
