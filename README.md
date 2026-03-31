@@ -29,7 +29,7 @@ This is dramatically cheaper and faster to iterate on. Your AI assistant edits a
 
 **Input** ([`naive-storage-flow-pull-storm.mmd`](naive-storage-flow-pull-storm.mmd)):
 
-```mermaid
+```text
 sequenceDiagram
     title Pull Storm — Every Node Fetches Everything
 
