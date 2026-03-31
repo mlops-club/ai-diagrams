@@ -18,7 +18,7 @@ uv run mermaid2excalidraw.py input.mmd output.excalidraw
 ```
 
 > [!NOTE]
-> This script is not that sophisticated. This repo is meant to serve as a reference implementation for how you might use agents to make diagrams **(1)** more quickly and **(2)** beautiful enough for marketing materials.
+> This script is not that sophisticated. Think of this repo as a reference implementation for how you might use agents to make diagrams **(1)** more quickly and **(2)** beautiful enough for marketing materials.
 
 ## Philosophy
 
